@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>NJ Bill Search</title>
+  <meta name="viewport" content="width=360, initial-scale=1">
+  <link rel="stylesheet" href="css/nouislider.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <form id="search-form" action="">
+      <div class="form-input">
+        <label for="input-desc">Keyword Search:</label>
+        <br>
+        <input name="desc" type="text" id="input-desc" placeholder="Find bills similar to the word">
+      </div>
+
+      <div class="form-input">
+        <label for="input-body">Governing Body:</label>
+        <br>
+        <input type="checkbox" id="checkbox-body-house" name="body[]" value="house">
+        <label for="checkbox-body-house">House</label>
+        <input type="checkbox" id="checkbox-body-senate" name="body[]" value="senate" checked>
+        <label for="checkbox-body-senate">Senate</label>
+      </div>
+
+      <div class="form-input">
+        <label for="input-type">Type:</label>
+        <br>
+        <input type="checkbox" id="checkbox-type-bill" name="type[]" value="bill">
+        <label for="checkbox-type-bill">Bill</label>
+        <input type="checkbox" id="checkbox-type-resolution" name="type[]" value="resolution" checked>
+        <label for="checkbox-type-resolution">Resolution</label>
+      </div>
+
+      <div class="form-input">
+        <label for="input-category">Category:</label>
+        <br>
+        <select name="category" type="text" id="input-category">
+          <option value="Agriculture and Food">Agriculture and Food</option>
+          <option value="Animals">Animals</option>
+          <option value="Armed Forces and National Security">Armed Forces and National Security</option>
+          <option value="Arts, Culture, Religion">Arts, Culture, Religion</option>
+          <option value="Civil Rights and Liberties, Minority Issues">Civil Rights and Liberties, Minority Issues</option>
+          <option value="Commerce">Commerce</option>
+          <option value="Congress">Congress</option>
+          <option value="Crime and Law Enforcement">Crime and Law Enforcement</option>
+          <option value="Economics and Public Finance">Economics and Public Finance</option>
+          <option value="Education">Education</option>
+          <option value="Emergency Management">Emergency Management</option>
+          <option value="Energy">Energy</option>
+          <option value="Environmental Protection">Environmental Protection</option>
+          <option value="Families">Families</option>
+          <option value="Finance and Financial Sector">Finance and Financial Sector</option>
+          <option value="Foreign Trade and International Finance">Foreign Trade and International Finance</option>
+          <option value="Government Operations and Politics">Government Operations and Politics</option>
+          <option value="Health">Health</option>
+          <option value="Housing and Community Development">Housing and Community Development</option>
+          <option value="Immigration">Immigration</option>
+          <option value="International Affairs">International Affairs</option>
+          <option value="Labor and Employment">Labor and Employment</option>
+          <option value="Law">Law</option>
+          <option value="Native Americans">Native Americans</option>
+          <option value="Public Lands and Natural Resources">Public Lands and Natural Resources</option>
+          <option value="Science, Technology, Communications">Science, Technology, Communications</option>
+          <option value="Social Sciences and History">Social Sciences and History</option>
+          <option value="Social Welfare">Social Welfare</option>
+          <option value="Sports and Recreation">Sports and Recreation</option>
+          <option value="Taxation">Taxation</option>
+          <option value="Transportation and Public Works">Transportation and Public Works</option>
+          <option value="Water Resources Development">Water Resources Development</option>
+        </select>
+      </div>
+
+      <div class="form-input">
+        <label for="month-slider">Month:</label>
+        <br>
+        <div id="month-slider"></div>
+      </div>
+
+      <div class="form-buttons">
+        <button name="search-button" type="submit">Search</button>
+        <button name="stop-button" type="buttom" disabled>Stop</button>
+      </div>
+    </form>
+
+    <div class="search-result"></div>
+    <div class="page-counter"></div>
+  </div>
+
+  <script src="js/nouislider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

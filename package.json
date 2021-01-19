@@ -1,0 +1,27 @@
+{
+  "name": "badoo-scraper",
+  "version": "1.0.0",
+  "description": "This project will scrape the Internet for latest NFL news.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set PORT=8080 && nodemon server.js",
+    "prod": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsdom": "^11.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rushimanche/nflscraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rushimanche/nflscraper/issues"
+  },
+  "homepage": "https://github.com/rushimanche/nflscraper#readme"
+}
