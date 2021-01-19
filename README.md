@@ -1,2 +1,2 @@
-# nflscraper
-This project will scrape the Internet for latest NFL news.
+# njscraper
+This project will scrape the Internet for NJ bills.
