@@ -9,19 +9,18 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'));
 
 app.get('/api', (req, res) => {
-  let url = 'https://legiscan.com/NJ/legislation';
-
-  url += (req.query.body !== '' ? '?chamber=' + req.query.body : '');
-  url += (req.query.type !== '' ? '?type=' + req.query.body : '');
-
-
-  let names = req.query.names;
-
-  if (names !== '') {
-    names = names.split(',');
-    names = names.map(name => name.trim());
+  let url = '';
+  if (req.query.desc == '') {
+    url = 'https://legiscan.com/NJ/legislation';
+    url += (req.query.body !== '' ? '?chamber=' + req.query.body : '');
+    url += (req.query.type !== '' ? '?type=' + req.query.type : '');
+    url += (req.query.status !== '' ? '?status=' + req.query.status : '');
   }
-
+  else {
+    url = 'https://legiscan.com/gaits/search?state=NJ&keyword=';
+    url += req.query.desc;
+  }
+  
   JSDOM.fromURL(url).then(dom => {
     const document = dom.window.document;
     const userCards = document.querySelectorAll('.user-card');
