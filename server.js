@@ -11,11 +11,9 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'));
 app.get('/api', (req, res) => {
   let url = 'https://legiscan.com/NJ/legislation';
 
-  url += '?' + req.query.location;
-  url += (req.query.sex !== '' ? '/' + req.query.sex : '');
-  url += '/page-' + req.query.page;
-  url += '/age-' + req.query.age;
-  url += '/';
+  url += (req.query.body !== '' ? '?chamber=' + req.query.body : '');
+  url += (req.query.type !== '' ? '?type=' + req.query.body : '');
+
 
   let names = req.query.names;
 
